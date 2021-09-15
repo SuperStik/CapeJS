@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+		const playername = window.location.href.split("?")[1].split(".")[0];
+		$.get("https://api.mojang.com/users/profiles/minecraft/" + playername, function(data){
+			window.location.replace("https://crafatar.com/capes/" + data.id)
+		});
+		</script>
+	</head>
+	<body>
+		<p>Loading...</p>
+	</body>
+</html>
