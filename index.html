@@ -4,8 +4,7 @@
 		<script>
 		const playername = window.location.href.split("?")[1].split(".")[0];
 		$.get("https://api.ashcon.app/mojang/v2/user/" + playername, function(data){
-			console.log(data)
-			//window.location.replace("https://crafatar.com/capes/" + data.id)
+			window.location.replace(data.textures.cape.url)
 		});
 		</script>
 	</head>
