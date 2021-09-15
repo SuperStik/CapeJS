@@ -3,8 +3,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
 		const playername = window.location.href.split("?")[1].split(".")[0];
-		$.get("https://api.mojang.com/users/profiles/minecraft/" + playername, function(data){
-			window.location.replace("https://crafatar.com/capes/" + data.id)
+		$.get("https://api.ashcon.app/mojang/v2/user/" + playername, function(data){
+			console.log(data)
+			//window.location.replace("https://crafatar.com/capes/" + data.id)
 		});
 		</script>
 	</head>
